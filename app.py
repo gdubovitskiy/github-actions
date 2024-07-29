@@ -16,20 +16,6 @@ def hello_world():
     return render_template("index.html")
 
 
-# @app.route("/hello/")
-# def hello_from_qs():
-#     print("args:", request.args)
-#     name = request.args.get("name", "")
-#     foo = request.args.getlist("foo")
-#     # foo = request.args.get("foo")
-#     return {"message": f"Hello, {name}!", "foo": foo}
-#
-#
-# @app.get("/hello/<name>/")
-# def hello_name(name):
-#     return {"message": f"Hello, {name}!"}
-
-
 @app.get("/hello/")
 @app.get("/hello/<name>/")
 def hello_name(name=None):
